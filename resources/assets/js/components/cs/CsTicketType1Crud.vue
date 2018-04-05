@@ -48,9 +48,10 @@
                         console.log(' setselectedticket--this.selectedTicket=',this.selectedTicket); 
                                           })     .catch((error) => {console.log('save error');});
                      } 
-                  else if (this.typeData.action === 'Edit')// update
+                  else if (this.type1Data.action === 'Edit')// update
                    { this.$store.dispatch('setCsTicketType1ShowModal', payload);  
-                      this.$store.dispatch('updatetype', this.formData)
+                   console.log(' payload=',payload); 
+                      this.$store.dispatch('cstype1update', this.formData)
                         .then((response) => {})     .catch((error) => {});
                    }
                   else  {     }// error
